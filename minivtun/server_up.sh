@@ -14,6 +14,8 @@ minivtun_ip4_work_mask=`sed -n 's/^local.*=\(.*\)/\1/p' $TUN_CONFIG`
 # turn on NAT over default gateway and VPN
 iptables -t nat -A POSTROUTING -s $minivtun_ip4_work_mask ! -d $minivtun_ip4_work_mask  -j MASQUERADE
 
+iptables -I FORWARD -s $minivtun_ip4_work_mask -j ACCEPT
+
 iptables -A FORWARD -d $minivtun_ip4_work_mask -j ACCEPT
 
 iptables -A INPUT -p udp --dport $minivtun_udpport -j ACCEPT
