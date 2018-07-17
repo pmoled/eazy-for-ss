@@ -7,7 +7,11 @@ TUN_CONFIG="$ROOT_DIR/mt.conf"
 
 source $TUN_CONFIG
 
+#merlin
 #modprobe tun
+#群晖
+#lsmod | grep tun
+#insmod /lib/modules/tun.ko
 
 echo "1 for run, 2 for stop"
 read choose
