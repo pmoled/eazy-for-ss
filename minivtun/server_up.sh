@@ -1,7 +1,7 @@
 #!/bin/sh
 #vars
 ROOT_DIR="$(cd "$(dirname $0)"; pwd)"
-TUN_CONFIG="$ROOT_DIR/mt.conf"
+TUN_CONFIG="$ROOT_DIR/server.conf"
 
 # turn on IP forwarding
 sysctl -w net.ipv4.ip_forward=1 > /dev/null 2>&1
