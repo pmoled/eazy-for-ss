@@ -1,7 +1,7 @@
 #!/bin/sh
 #vars
 ROOT_DIR="$(cd "$(dirname $0)"; pwd)"
-TUN_CONFIG="$ROOT_DIR/mt.conf"
+TUN_CONFIG="$ROOT_DIR/server.conf"
 
 #gw_intf_oc=`ip route show 0/0 | sort -k 7 | head -n 1 | sed -n 's/^default.* dev \([^ ]*\).*/\1/p'`
 minivtun_udpport=`sed -n 's/^server_port.*=\(.*\)/\1/p' $TUN_CONFIG`
