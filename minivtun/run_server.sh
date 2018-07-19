@@ -3,7 +3,7 @@
 #source /koolshare/scripts/base.sh
 
 ROOT_DIR="$(cd "$(dirname $0)"; pwd)"
-TUN_CONFIG="$ROOT_DIR/mt.conf"
+TUN_CONFIG="$ROOT_DIR/server.conf"
 
 source $TUN_CONFIG
 
