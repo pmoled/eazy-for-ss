@@ -59,7 +59,7 @@ tar xf nginx-${Nginx_V}.tar.gz -C Nginx --strip-components=1
 git clone https://github.com/stogh/ngx_http_auth_pam_module.git
 #git clone https://github.com/gnosek/nginx-upstream-fair.git
 git clone https://github.com/itoffshore/nginx-upstream-fair.git
-git clone https://github.com/cuber/ngx_http_google_filter_module.git
+git clone -b dev https://github.com/cuber/ngx_http_google_filter_module.git
 git clone https://github.com/arut/nginx-dav-ext-module.git
 git clone https://github.com/yaoweibin/ngx_http_substitutions_filter_module.git
 cd Nginx
@@ -69,7 +69,7 @@ cd Nginx
 --add-module=../ngx_http_auth_pam_module \
 --add-module=../nginx-upstream-fair \
 --add-module=../nginx-dav-ext-module \
---with-openssl=../libressl \
+--with-openssl=../libressl --with-openssl-opt=enable-tls1_3 \
 --with-ld-opt="-lrt"
 make -j"$(nproc)"
 strip -s objs/nginx || die "Make Failed."
