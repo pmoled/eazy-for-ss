@@ -8,8 +8,8 @@
 #libressl和Nginx版本
 #LibreSSL_V=`wget -qO- http://www.libressl.org/ |sed -n 's/.*stable release is \([^<]*\).*/\1/p'`
 #Nginx_V=`wget -qO- 'http://nginx.org/en/CHANGES'|sed -n 's/^Changes.*nx \([^ ]*\).*/\1/p'|head -n1`
-LibreSSL_V=2.5.1
-Nginx_V=1.11.9
+LibreSSL_V=3.0.2
+Nginx_V=1.17.6
 #######################
 #base-func
 die(){ echo -e "\033[33mERROR: $1 \033[0m" > /dev/null 1>&2;exit 1;};print_info(){ echo -n -e '\e[1;36m';echo -n $1;echo -e '\e[0m';};print_warn(){ echo -n -e '\033[41;37m';echo -n $1;echo -e '\033[0m';};Script_Dir="$(cd "$(dirname $0)"; pwd)"
@@ -41,8 +41,8 @@ apt-get update
 apt-get install -y tar unzip build-essential openssl git sudo
 apt-get install -y zlib1g-dev libbz2-dev libpcre3 libpcre3-dev libssl-dev libperl-dev libxslt1-dev libgd2-xpm-dev libgeoip-dev libpam0g-dev libc6-dev
 apt-get install -y libc6 libgeoip1 libxslt1.1 libxml2 libexpat1 libossp-uuid16
-apt-get install -y libgd2-xpm
-apt-get install -y libgd2-xpm-dev
+apt-get install -y libgd2-xpm libgd2-xpm-dev libgd3 libgd-dev
+apt-get install -y libxslt1-dev libpcre3-dev libgeoip-dev
 apt-get clean
 #添加用户修改权限
 cat /etc/group|grep -E '^www-data:'  > /dev/null 2>&1 || sudo groupadd www-data
