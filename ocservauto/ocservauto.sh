@@ -333,7 +333,7 @@ function get_Custom_configuration_2(){
         fast_Default_Ask "$OC_version_latest is the latest,but default version is recommended.Which to choose?" "$Default_oc_version" "oc_version"
     }
 #which port to use for verification 选择验证端口
-    fast_Default_Ask "Which port to use for verification?(Tcp-Port)" "999" "ocserv_tcpport_set"
+    fast_Default_Ask "Which port to use for verification?(Tcp-Port)" "3389" "ocserv_tcpport_set"
 #tcp-port only or not 是否仅仅使用tcp端口，即是否禁用udp
     fast_Default_Ask "Only use tcp-port or not?(y/n)" "n" "only_tcp_port"
 #which port to use for data transmission 选择udp端口 即专用数据传输的udp端口
@@ -653,7 +653,7 @@ _EOF_
 #modify config file 设定相关参数
 function set_ocserv_conf(){
 #default vars
-    ocserv_tcpport_set=${ocserv_tcpport_set:-999}
+    ocserv_tcpport_set=${ocserv_tcpport_set:-3389}
     ocserv_udpport_set=${ocserv_udpport_set:-1999}
     save_user_vars=${save_user_vars:-n}
     ocserv_boot_start=${ocserv_boot_start:-y}
