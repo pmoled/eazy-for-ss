@@ -1015,7 +1015,7 @@ Default_oc_version="0.10.8"
 #证书以及用户名登录都会采取。
 #证书分组模式下，ios下anyconnect客户端有bug，请不要使用。
 #默认为n关闭，开启为y。
-open_two_group="n"
+open_two_group="y"
 #编译安装ocserv的额外选项
 #例如Extra_Options="--with-local-talloc --enable-local-libopts --without-pcl-lib  --without-http-parser --without-protobuf"
 #详细请参考./configure --help 或ocserv官网
