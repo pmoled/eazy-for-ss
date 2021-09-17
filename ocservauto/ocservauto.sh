@@ -973,7 +973,7 @@ function surport_Syscodename(){
     [ "$oc_D_V" = "wily" ] && return 0
     [ "$oc_D_V" = "xenial" ] && return 0
     #TEST NEWER SYS 测试新系统，取消下面一行的注释。
-    #[ "$oc_D_V" = "$oc_D_V" ] && return 0
+    [ "$oc_D_V" = "$oc_D_V" ] && return 0
 ###############################
 # # 另一种实现方式
 # D_V=( wheezy jessie trusty utopic vivid )
